@@ -1,0 +1,49 @@
+# Бірөлшемді массив (10 нақты сан)
+A = [3, 12, 7, 8, 15, 6, 2, 9, 10, 5]
+
+# Жұп элементтерді таңдаймыз
+even_elements = [x for x in A if x % 2 == 0]
+
+if even_elements:
+    max_even = max(even_elements)
+    print("Массив:", A)
+    print("Жұп элементтер:", even_elements)
+    print("Максимум жұп элемент:", max_even)
+else:
+    print("Жұп элемент жоқ!")
+
+
+
+
+# Екіөлшемді массив (5 жол, 10 баған)
+A = [
+    [1, -3, 5, -7, 9, -2, 4, -6, 8, -10],
+    [2, 3, -1, -5, 7, -9, 11, -13, 15, -17],
+    [6, -8, 10, -12, 14, -16, 18, -20, 22, -24],
+    [-2, 4, -6, 8, -10, 12, -14, 16, -18, 20],
+    [5, -7, 9, -11, 13, -15, 17, -19, 21, -23]
+]
+
+positive_count = 0
+negative_count = 0
+
+for row in A:
+    for el in row:
+        if el > 0:
+            positive_count += 1
+        elif el < 0:
+            negative_count += 1
+
+print("Матрица:")
+for row in A:
+    print(row)
+
+print("Оң сандар саны:", positive_count)
+print("Теріс сандар саны:", negative_count)
+
+if positive_count > negative_count:
+    print("Оң сандар көп")
+elif negative_count > positive_count:
+    print("Теріс сандар көп")
+else:
+    print("Оң және теріс сандар тең")
