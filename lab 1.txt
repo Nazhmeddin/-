@@ -1,0 +1,44 @@
+a = 15
+b = 4
+
+print("Қосу:", a + b)
+print("Азайту:", a - b)
+print("Көбейту:", a * b)
+print("Дәрежеге шығару:", a ** b)
+print("Бөлу:", a / b)
+print("Бүтін бөлу:", a // b)
+print("Қалдық:", a % b)
+
+
+
+
+
+# while мысалы
+i = 1
+while i <= 5:
+    print("while циклі:", i)
+    i += 1
+
+# for мысалы
+for j in range(1, 6):
+    print("for циклі:", j)
+
+
+
+# 1. Кері шығару
+lst = [1, 2, 3, 4, 5]
+print("Кері тізім:", lst[::-1])
+
+# 2. Сұрыптау
+def list_sort(lst):
+    return sorted(lst, key=abs, reverse=True)
+
+print("Сұрыптау:", list_sort([3, -10, 5, -7, 2]))
+
+# 3. Бірінші мен соңғысын ауыстыру
+def change(lst):
+    lst[0], lst[-1] = lst[-1], lst[0]
+    return lst
+
+print("Ауыстыру:", change([10, 20, 30, 40]))
+
